@@ -1,0 +1,30 @@
+@import "variables";
+@import "functions";
+@import "nav-foot";
+
+// Make bold elements a little bolder
+b {
+	font-weight: bolder;
+}
+
+body {
+	background-color: @background-color;
+
+	// Reset margins so that elements can take up 100% of the window space if desired*/
+	margin: 0;
+	padding: 0;
+
+	// Move out the way of the footer and nav elements
+	margin-bottom: @footer[@dimensions][height];
+	.in-horizontal-mode({
+		margin-top: @navbar[@horizontal][height];
+	});
+
+	overflow: scroll;
+
+	> * {
+		// Add the padding back in
+		padding-left: @left-padding;
+		padding-right: @right-padding;
+	}
+}

@@ -1,0 +1,59 @@
+// Basic wrapper functions for media queries
+.in-horizontal-mode(@function) {
+	@media screen and (min-width: @horizontal-width) {
+		@function();
+	}
+}
+
+.in-vertical-mode(@function) {
+	@media screen and (max-width: @horizontal-width) {
+		@function();
+	}
+}
+
+.vertical-mode-exclusive(@display: block) {
+	.in-vertical-mode({
+		display: @display;
+	});
+
+	.in-horizontal-mode({
+		display: none;
+	});
+}
+
+.horizontal-mode-exclusive(@display: block) {
+	.in-horizontal-mode({
+		display: @display;
+	});
+
+	.in-vertical-mode({
+		display: none;
+	});
+}
+
+.all-link-psuedo-classes(@function) {
+	&:link, &:visited, &:hover, &:active {
+		@function();
+	}
+}
+
+// Positioning functions
+.position-top-left(@offset-x: 0, @offset-y: 0) {
+	left: @offset-x;
+	top: @offset-y;
+}
+
+.position-top-right(@offset-x: 0, @offset-y: 0) {
+	right: @offset-x;
+	top: @offset-y;
+}
+
+.position-bottom-left(@offset-x: 0, @offset-y: 0) {
+	left: @offset-x;
+	bottom: @offset-y;
+}
+
+.position-bottom-right(@offset-x: 0, @offset-y: 0) {
+	right: @offset-x;
+	bottom: @offset-y;
+}

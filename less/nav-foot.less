@@ -1,0 +1,129 @@
+nav, footer {
+	display: flex;
+	flex-direction: column;
+
+	position: fixed;
+	// Place these elements on top of everything else
+	z-index: 1000;
+}
+
+#nav-container {
+	width: 100vw;
+	padding: 0;
+}
+
+nav {
+	background-color: @navbar[background-color];
+	box-sizing: border-box;
+
+	//Position at the top left of the page with no offset
+	.position-top-left();
+
+	.in-vertical-mode({
+		flex-direction: column;
+
+		// Transform off the page
+		transform: translateY(-100%);
+
+		&:target {
+			// Transform back onto the page
+			transform: translateY(0);
+		}
+
+		width: @navbar[@vertical][width];
+		height: @navbar[@vertical][height];
+		padding: @navbar[@vertical][padding];
+	});
+
+	.in-horizontal-mode({
+		flex-direction: row;
+
+		width: @navbar[@horizontal][width];
+		height: @navbar[@horizontal][height];
+		padding: @navbar[@horizontal][padding];
+
+		padding-left: @navbar[@horizontal][padding-left];
+	});
+
+	// The list of links
+	& > ul {
+		display: flex;
+		gap: @navbar[@item][gap];
+
+		// Center elements vertically
+		align-items: center;
+
+		// Remove bullet decoration
+		list-style-type: none;
+
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+
+		.in-vertical-mode({
+			flex-direction: column;
+			padding-top: 10%;
+		});
+
+		.in-horizontal-mode({
+			flex-direction: row;
+			padding-top: 0;
+		});
+
+		li > a {
+			background-color: @navbar[link-background-color];
+
+			padding: @navbar[@item][padding];
+			max-height: @navbar[@item][max-height];
+
+			// Remove the underline
+			text-decoration: none;
+
+			// Center the contents
+			align-items: center;
+
+			.all-link-psuedo-classes({
+				color: @navbar[link-text-color];
+			});
+		}
+	}
+}
+
+footer {
+	background-color: @footer[background-color];
+	width: @footer[@dimensions][width];
+	height: @footer[@dimensions][height];
+
+	justify-content: center;
+
+	// Position at the bottom left of the page with no offset
+	.position-bottom-left();
+}
+
+#hamburger-button {
+	background-color: @navbar[background-color];
+	padding: 10px;
+	.vertical-mode-exclusive(inline-block);
+}
+
+#menu-close-button {
+	position: absolute;
+	.position-top-right(0.5, 0.5);
+	.vertical-mode-exclusive(inline-block);
+}
+
+#hamburger-button, #menu-close-button {
+	font-size: larger;
+	z-index: 1001;
+
+	.all-link-psuedo-classes({
+		color: @navbar[link-text-color];
+	});
+}
+
+#logo {
+	height: @logo[height];
+	width: @logo[width];
+	.horizontal-mode-exclusive(block);
+}
