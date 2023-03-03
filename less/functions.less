@@ -31,6 +31,12 @@
 	});
 }
 
+.all-direct-children(@function) {
+	& > * {
+		@function();
+	}
+}
+
 .all-link-psuedo-classes(@function) {
 	&:link, &:visited, &:hover, &:active {
 		@function();

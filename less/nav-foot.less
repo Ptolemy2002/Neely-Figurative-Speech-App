@@ -45,49 +45,51 @@ nav {
 		padding-left: @navbar[@horizontal][padding-left];
 	});
 
-	// The list of links
-	& > ul {
-		display: flex;
-		gap: @navbar[@item][gap];
+	.all-direct-children({
+		// The list of links
+		&:is(ul) {
+			display: flex;
+			gap: @navbar[@item][gap];
 
-		// Center elements vertically
-		align-items: center;
-
-		// Remove bullet decoration
-		list-style-type: none;
-
-		height: 100%;
-		width: 100%;
-		padding: 0;
-		margin: 0;
-
-		.in-vertical-mode({
-			flex-direction: column;
-			padding-top: 10%;
-		});
-
-		.in-horizontal-mode({
-			flex-direction: row;
-			padding-top: 0;
-		});
-
-		li > a {
-			background-color: @navbar[link-background-color];
-
-			padding: @navbar[@item][padding];
-			max-height: @navbar[@item][max-height];
-
-			// Remove the underline
-			text-decoration: none;
-
-			// Center the contents
+			// Center elements vertically
 			align-items: center;
 
-			.all-link-psuedo-classes({
-				color: @navbar[link-text-color];
+			// Remove bullet decoration
+			list-style-type: none;
+
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+
+			.in-vertical-mode({
+				flex-direction: column;
+				padding-top: 10%;
 			});
+
+			.in-horizontal-mode({
+				flex-direction: row;
+				padding-top: 0;
+			});
+
+			li > a {
+				background-color: @navbar[@link][background-color];
+
+				padding: @navbar[@item][padding];
+				max-height: @navbar[@item][max-height];
+
+				// Remove the underline
+				text-decoration: none;
+
+				// Center the contents
+				align-items: center;
+
+				.all-link-psuedo-classes({
+					color: @navbar[@link][text-color];
+				});
+			}
 		}
-	}
+	});
 }
 
 footer {
@@ -118,7 +120,7 @@ footer {
 	z-index: 1001;
 
 	.all-link-psuedo-classes({
-		color: @navbar[link-text-color];
+		color: @navbar[@link][text-color];
 	});
 }
 

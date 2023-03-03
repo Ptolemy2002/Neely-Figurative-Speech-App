@@ -1,6 +1,7 @@
 @import "variables";
 @import "functions";
 @import "nav-foot";
+@import "wrap";
 
 // Make bold elements a little bolder
 b {
@@ -22,9 +23,9 @@ body {
 
 	overflow: scroll;
 
-	> * {
+	.all-direct-children({
 		// Add the padding back in
 		padding-left: @left-padding;
 		padding-right: @right-padding;
-	}
+	});
 }

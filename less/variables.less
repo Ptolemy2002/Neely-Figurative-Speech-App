@@ -2,6 +2,7 @@
 @colors: {
 	gold: #7c6e52;
 	black: #242424;
+	gray: lighten(#242424, 2%);
 	white: #ffffff;
 }
 
@@ -10,8 +11,11 @@
 
 @navbar: {
 	background-color: @colors[gold];
-	link-background-color: @colors[black];
-	link-text-color: @colors[white];
+
+	@link: {
+		text-color: @colors[white];
+		background-color: @colors[black];
+	}
 
 	@horizontal: {
 		width: 100%;
@@ -52,4 +56,28 @@
 	// Keep aspect ratio
 	width: auto;
 	height: 65%;
+}
+
+@card: {
+	background-color: @colors[gray];
+	text-color: @colors[white];
+
+	@dimensions: {
+		width: 30%;
+		height: 30%;
+		max-width: 200px;
+		max-height: 200px;
+	}
+
+	@link: {
+		text-color: @colors[white];
+		background-color: @colors[gold];
+
+		@dimensions: {
+			padding: 3%;
+		}
+	}
+
+	@padding: 5%;
+	@margin: 2%;
 }

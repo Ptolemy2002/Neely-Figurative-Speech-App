@@ -1,0 +1,30 @@
+.wrap-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	justify-content: space-around;
+}
+
+.card {
+	height: @card[@dimensions][height];
+	width: @card[@dimensions][width];
+	max-width: @card[@dimensions][max-width];
+	max-height: @card[@dimensions][max-height];
+
+	padding: @card[@padding];
+	margin: @card[@margin];
+
+	background-color: @card[background-color];
+	color: @card[text-color];
+
+	a {
+		background-color: @card[@link][background-color];
+		padding: @card[@link][@dimensions][padding];
+		text-decoration: none;
+
+		.all-link-psuedo-classes({
+			color: @card[@link][text-color];
+		});
+	}
+}
