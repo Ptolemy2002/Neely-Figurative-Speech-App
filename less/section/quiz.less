@@ -1,0 +1,25 @@
+#quiz-section {
+	width: 100%;
+    .show-only-when-targeted(flex);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: @section[@column-gap];
+    padding-top: @section[padding-top];
+}
+
+.quiz {
+	a {
+		text-decoration: underline;
+		color: @colors[link];
+		
+		&:hover {
+			&:is(a[right]) {
+				color: @colors[correct];
+			}
+
+			&:is(a[wrong]) {
+				color: @colors[incorrect];
+			}
+		}
+	}
+}
