@@ -14,6 +14,9 @@
 		<script src="https://cdn.jsdelivr.net/npm/less"></script>
 		<!-- Include Font Awesome -->
 		<script src="https://kit.fontawesome.com/7aa01cfd49.js" crossorigin="anonymous"></script>
+
+		<!-- Tool for iframe sizing -->
+		<script src="../javascript/iframe.js" defer></script>
     </head>
 
     <body>
@@ -70,15 +73,37 @@
 		</div>
         
         <h1>Simile</h1>
+		<p>
+			Compare things using "like" or "as"
+		</p>
 		
 		<div id="video-section">
-			<iframe width="560" height="315" 
-				src="https://www.youtube.com/embed/NpEaa2P7qZI" 
-				title="Placeholder Video | Youtube" frameborder="0" 
+			<!--
+				http://www.youtube.com/watch?v=pm6zt24w0qU
+			-->
+			<iframe
+				src="http://www.youtube.com/embed/pm6zt24w0qU" 
+				title="Simile Lesson | Youtube" frameborder="0" 
 				allow="accelerometer; autoplay; clipboard-write; 
 					   encrypted-media; gyroscope; picture-in-picture; web-share" 
 				allowfullscreen>
 			</iframe>
+
+			<!--
+				http://www.youtube.com/watch?v=Syv4x-09luY
+			-->
+			<iframe
+				src="http://www.youtube.com/embed/Syv4x-09luY" 
+				title="Similes in Movies | Youtube" frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; 
+					   encrypted-media; gyroscope; picture-in-picture; web-share" 
+				allowfullscreen>
+			</iframe>
+
+			<div class="button-container">
+				<button>Next</button>
+				<button>Last</button>
+			</div>
 		</div>
 
 		<footer>

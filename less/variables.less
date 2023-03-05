@@ -1,6 +1,7 @@
 // Colors
 @colors: {
 	gold: #7c6e52;
+	light-gold: lighten(#7c6e52, 5%);
 	black: #242424;
 	gray: lighten(#242424, 2%);
 	white: #ffffff;
@@ -40,6 +41,7 @@
 
 @footer: {
 	background-color: @colors[gold];
+	text-color: @colors[white];
 
 	@dimensions: {
 		width: 100%;
@@ -71,8 +73,8 @@
 	}
 
 	@dimensions: {
-		width: 30%;
-		height: 30%;
+		width: 35vw;
+		height: 20vh;
 		max-width: 200px;
 		max-height: 200px;
 	}
@@ -88,4 +90,33 @@
 
 	@padding: 5%;
 	@margin: 2%;
+}
+
+@section: {
+	padding-top: 2rem;
+	@column-gap: 2rem;
+}
+
+@button-container: {
+	gap: 1rem;
+
+	@dimensions: {
+		width: auto;
+		height: 50px;
+	}
+
+	@button: {
+		text-color: @colors[white];
+		background-color: @colors[gold];
+		hover-background-color: @colors[light-gold];
+
+		@dimensions: {
+			width: 100px;
+			height: 50px;
+		}
+
+		@font: {
+			size: 1rem;
+		}
+	}
 }

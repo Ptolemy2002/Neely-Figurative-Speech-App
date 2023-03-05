@@ -1,0 +1,24 @@
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    gap: @button-container[gap];
+
+    width: @button-container[@dimensions][width];
+    height: @button-container[@dimensions][height];
+
+    button {
+        width: @button-container[@button][@dimensions][width];
+        height: @button-container[@button][@dimensions][height];
+
+        font-size: @button-container[@button][@font][size];
+        
+        color: @button-container[@button][text-color];
+        background-color: @button-container[@button][background-color];
+
+        &:hover {
+            background-color: @button-container[@button][hover-background-color];
+        }
+    }
+}
