@@ -17,6 +17,8 @@
 
 		<!-- Tool for iframe sizing -->
 		<script src="../javascript/iframe.js" defer></script>
+		<!-- Tool for loading the video section by default -->
+		<script src="../javascript/default_section.js" defer></script>
     </head>
 
     <body>
@@ -78,7 +80,10 @@
 		</p>
 		
 		<div id="video-section">
+			<h2>Videos</h2>
+
 			<!--
+				Simile Lesson
 				http://www.youtube.com/watch?v=pm6zt24w0qU
 			-->
 			<iframe
@@ -90,6 +95,7 @@
 			</iframe>
 
 			<!--
+				Similes in Movies
 				http://www.youtube.com/watch?v=Syv4x-09luY
 			-->
 			<iframe
@@ -101,8 +107,16 @@
 			</iframe>
 
 			<div class="button-container">
+				<a href="#example-section"><button>Next</button></a>
+			</div>
+		</div>
+
+		<div id="example-section">
+			<h2>Examples</h2>
+
+			<div class="button-container">
+				<a href="#video-section"><button>Last</button></a>
 				<button>Next</button>
-				<button>Last</button>
 			</div>
 		</div>
 
