@@ -2,6 +2,14 @@
 @import "example";
 @import "quiz";
 
+.section {
+    // Make sure the padding doesn't cause the section to overflow the page
+    box-sizing: border-box;
+
+    padding-top: @section[padding-top];
+    padding-bottom: @section[padding-bottom];
+}
+
 .button-container {
     display: flex;
     flex-direction: row;
@@ -11,7 +19,6 @@
 
     width: @button-container[@dimensions][width];
     height: @button-container[@dimensions][height];
-    padding-bottom: @button-container[@dimensions][padding-bottom];
 
     button {
         width: @button-container[@button][@dimensions][width];
