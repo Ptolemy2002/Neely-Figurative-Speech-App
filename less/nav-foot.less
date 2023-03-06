@@ -13,8 +13,9 @@ nav, footer {
 }
 
 nav {
-	background-color: @navbar[background-color];
 	box-sizing: border-box;
+
+	background-color: @navbar[background-color];
 
 	//Position at the top left of the page with no offset
 	.position-top-left();
@@ -93,6 +94,8 @@ nav {
 }
 
 footer {
+	box-sizing: border-box;
+
 	background-color: @footer[background-color];
 	color: @footer[text-color];
 	width: @footer[@dimensions][width];

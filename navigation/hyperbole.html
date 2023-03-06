@@ -15,8 +15,6 @@
 		<!-- Include Font Awesome -->
 		<script src="https://kit.fontawesome.com/7aa01cfd49.js" crossorigin="anonymous"></script>
 
-		<!-- Tool for iframe sizing -->
-		<script src="../javascript/iframe.js" defer></script>
 		<!-- Tool for loading the video section by default -->
 		<script src="../javascript/default_section.js" defer></script>
     </head>
@@ -76,48 +74,46 @@
         
         <h1>Hyperbole</h1>
 		<p>
-			Exaggerations that are so dramatic that no one would believe it is true. 
+			Exaggerate for effect
 		</p>
-		<!-- http://www.youtube.com/embed/kuzWLDWm6Zs -->
-<!-- http://www.youtube.com/embed/z_ODYCs9CS4 -->
-<div id="video-section" class="section">
-	<h2>Videos</h2>
 
-	<div class="video-container">
-		<div class='embed-container'>
-			<!-- <iframe width="699" height="393"
-				src='http://www.youtube.com/embed/kuzWLDWm6Zs'
-				frameborder='0'
-				allowfullscreen>
-			</iframe> -->
-			<iframe width="1440" height="702" src="https://www.youtube.com/embed/kuzWLDWm6Zs" title="What is Hyperbole?" frameborder="0" allow="accelerometer; autoplay; 
-			clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-		</div>
-	</div>
-	<div class="video-container">
-		<div class='embed-container'>
-			<!-- <iframe width="699" height="393"
-				src='http://www.youtube.com/embed/z_ODYCs9CS4'
-				frameborder='0'
-				allowfullscreen>
-			</iframe> -->
+		<div id="video-section" class="section">
+			<h2>Videos</h2>
 
-			<iframe width="864" height="486" src="https://www.youtube.com/embed/z_ODYCs9CS4" 
-			title="Hyperboles in Disney Movies" frameborder="0" allow="accelerometer; 
-			autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-		</div>
-	</div>
+			<!--
+				What is Hyperbole?
+				http://www.youtube.com/watch?v=kuzWLDWm6Zs
+			-->
+			<div class="video-container">
+				<div class='embed-container'>
+					<iframe 
+						src='http://www.youtube.com/embed/kuzWLDWm6Zs'
+						frameborder='0'
+						allowfullscreen>
+					</iframe>
+				</div>
+			</div>
 
-
-
-
+			<!--
+				Hyperboles in Disney Movies
+				http://www.youtube.com/watch?v=z_ODYCs9CS4
+			-->
+			<div class="video-container">
+				<div class='embed-container'>
+					<iframe 
+						src='http://www.youtube.com/embed/z_ODYCs9CS4'
+						frameborder='0'
+						allowfullscreen>
+					</iframe>
+				</div>
+			</div>
 
 			<div class="button-container">
 				<a href="#example-section"><button>Next</button></a>
 			</div>
 		</div>
 
-		<div id="example-section">
+		<div id="example-section" class="section">
 			<h2>Examples</h2>
 			
 			<div>
@@ -126,14 +122,15 @@
 				<p>
 					Welcome to our restaurant <br>
 					Where every thing's gigantic. <br>
-					A hundred waiters hold one dish.  <br>
-					Our kitchen can get frantic.  <br>
-					Our noodles stretch a mile <br>
-					The bread is longer than a train. <br>
+					<mark>A hundred waiters hold one dish.</mark> <br>
+					Our kitchen can get frantic. <br>
+					<mark>Our soup is deeper than the sea.</mark> <br>
+					<mark>Our noodles stretch a mile</mark> <br>
+					<mark>bread is longer than a train.</mark> <br>
 					It's sure to make you smile. <br>
-					We pile our peas up mountain high. <br>
-					One cookie hides the moon.	 <br>
-					We pour our iced tea into boats<br>
+					<mark>We pile our peas up mountain high.</mark> <br>
+					<mark>One cookie hides the moon.</mark> <br>
+					<mark>We pour our iced tea into boats.</mark> <br>
 					We hope you'll visit soon. <br>
 				</p>
 			</div>
@@ -143,9 +140,9 @@
 				<p>
 					All by myself. <br>
 					Alone in a room. <br>
-					So lonely, it's been 10,000 years, <br>
-					So lonely no one remembers me at all, <br> 
-					So lonely my whole world is just this room. <br>
+					<mark>So lonely, it's been 10,000 years,</mark> <br>
+					<mark>So lonely no one remembers me at all,</mark> <br> 
+					<mark>So lonely my whole world is just this room.</mark> <br>
 					Oh wait! <br>
 					My 5 minutes are up. <br>
 					Goodbye, I'm going out to play!<br>
@@ -158,12 +155,14 @@
 			</div>
 		</div>
 
-		<div id="quiz-section">
-			<h2>Quiz</h2>
-			<p>
-				Can you find the hyperbole? Hover over to see if a line is a hyperbole or not. If the hover is green,
-				it is a hyperbole. If the hover is red, it is not a hyperbole. 
-			</p>
+		<div id="quiz-section" class="section">
+			<div>
+				<h2>Quiz</h2>
+				<p>
+					Guess whether each underlined part is a hyperbole. Then, hover over it with your mouse.
+					If you were right, it will turn green. If you were wrong, it will turn red.
+				</p>
+			</div>
 
 			<div class="quiz">
 				<h3>Apetite</h3>
@@ -174,7 +173,7 @@
 				<a right>For dinner he would eat a trillion beans</a> <br>
 				<a right>And a silo full of grain, </a> <br>
 				<a right>Washed it down with a tanker of milk</a> <br>
-				<a right>as if he were a drain</a> <br>
+				<a wrong>as if he were a drain</a> <br>
 			</div>
 
 			<div class="button-container">
