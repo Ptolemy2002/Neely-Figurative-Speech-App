@@ -4,21 +4,24 @@ function scrollToTop() {
     window.scroll(0, 0);
 }
 
-function loadDefaultSection() {
-    if (document.location.hash !== "#nav") {
-        if (document.location.hash == "" || document.location.hash == "#") {
-            document.location.hash = "#" + DEFAULT_SECTION;
-        }
+function loadDefaultSection(e) {
+    if (e) {
+        e.preventDefault();
     }
+    document.location.hash = "#" + DEFAULT_SECTION;
 }
 
-loadDefaultSection();
-
-// Every time the hash changes, scroll to the top of the page and load the default section
-window.addEventListener("hashchange", () => {
+if (document.location.hash == "" || document.location.hash == "#") {
     loadDefaultSection();
-    scrollToTop();
-}, false);
+}
+
+// Every time the hash changes, scroll to the top of the page
+window.addEventListener("hashchange", scrollToTop, false);
 
 // When the page loads, scroll to the top of the page
 window.addEventListener("load", scrollToTop, false);
+
+//Load the default section when you click on the close button
+document.querySelector("#menu-close-button").addEventListener("click", (e) => {
+    loadDefaultSection(e);
+}, false);
